@@ -225,6 +225,93 @@
     letter-spacing: .06em;
   }
 
+  /* ── MEET THE TEAM ── */
+  .team-section {
+    position: relative; z-index: 1;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 24px 20px;
+    text-align: center;
+  }
+  .team-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 700;
+    color: #F4ECFF;
+    margin-bottom: 6px;
+  }
+  .team-sub {
+    font-family: var(--font-body);
+    font-size: .92rem;
+    font-weight: 600;
+    color: rgba(236,224,255,.55);
+    margin-bottom: 36px;
+    letter-spacing: .04em;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 24px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  @media (max-width: 640px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 400px) {
+    .team-grid { grid-template-columns: 1fr; }
+  }
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: default;
+  }
+  .team-avatar {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,.18);
+    box-shadow: 0 0 0 4px rgba(124,58,237,.35), 0 14px 30px -8px rgba(91,51,214,.6);
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .team-member:hover .team-avatar {
+    transform: translateY(-6px) scale(1.06);
+    box-shadow: 0 0 0 4px var(--pink), 0 20px 40px -10px rgba(91,51,214,.7);
+  }
+  .team-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #F4ECFF;
+  }
+  .team-role {
+    font-family: var(--font-body);
+    font-size: .72rem;
+    font-weight: 700;
+    color: var(--pink);
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    margin-top: -6px;
+  }
+  .team-bio {
+    font-family: var(--font-body);
+    font-size: .78rem;
+    font-weight: 600;
+    color: rgba(236,224,255,.6);
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .team-divider {
+    position: relative; z-index: 1;
+    max-width: 600px;
+    margin: 10px auto 48px;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+
   /* ── FOOTER ── */
   footer {
     position: relative; z-index: 1;
@@ -314,6 +401,72 @@
   </a>
 
 </main>
+
+<hr class="team-divider">
+
+<!-- ── MEET THE TEAM ── -->
+<section class="team-section">
+  <h2 class="team-heading">Meet the Team 🐾</h2>
+  <p class="team-sub">Your friendly neighborhood adventurers, ready to guide every lesson</p>
+
+  <div class="team-grid">
+
+    <div class="team-member">
+      <img class="team-avatar" src="mascot-waylon.png" alt="Waylon the pup">
+      <div>
+        <div class="team-name">Waylon</div>
+        <div class="team-role">Reading Guide</div>
+      </div>
+      <p class="team-bio">High-fives ready — Waylon dives into every story with full enthusiasm.</p>
+    </div>
+
+    <div class="team-member">
+      <img class="team-avatar" src="mascot-poppie.png" alt="Poppie the possum">
+      <div>
+        <div class="team-name">Poppie</div>
+        <div class="team-role">Comprehension Coach</div>
+      </div>
+      <p class="team-bio">Poppie catches every detail and cheers extra loud for a job well done.</p>
+    </div>
+
+    <div class="team-member">
+      <img class="team-avatar" src="mascot-milo.png" alt="Milo the raccoon">
+      <div>
+        <div class="team-name">Milo</div>
+        <div class="team-role">Literacy Expert</div>
+      </div>
+      <p class="team-bio">Cool, sharp, and detail-obsessed — Milo knows every phonics rule in the book.</p>
+    </div>
+
+    <div class="team-member">
+      <img class="team-avatar" src="mascot-stela.png" alt="Stela the corgi">
+      <div>
+        <div class="team-name">Stela</div>
+        <div class="team-role">Confidence Coach</div>
+      </div>
+      <p class="team-bio">Stylish and social, Stela helps students find the right words in real conversations.</p>
+    </div>
+
+    <div class="team-member">
+      <img class="team-avatar" src="mascot-rebel.png" alt="Rebel the graduate pup">
+      <div>
+        <div class="team-name">Rebel</div>
+        <div class="team-role">Vocabulary Pro</div>
+      </div>
+      <p class="team-bio">Cap, gown, and all the right words — Rebel makes new vocabulary stick.</p>
+    </div>
+
+    <div class="team-member">
+      <img class="team-avatar" src="mascot-theo.png" alt="Theo the bear">
+      <div>
+        <div class="team-name">Theo</div>
+        <div class="team-role">Team Captain</div>
+      </div>
+      <p class="team-bio">Always waving hello, Theo makes sure every visitor feels welcome from the start.</p>
+    </div>
+
+  </div>
+</section>
 
 <footer>
   Made with <span>♥</span> for students everywhere
